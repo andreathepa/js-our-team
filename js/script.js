@@ -54,10 +54,10 @@ for(let i=0; i<staff.length; i++){
 
     console.log(member);
 
-    let column = `<div>
-        <img src="${image.member}">
-        <p>${member.name}</p>
-        <p>${member.role}</p></div>`;
+    let column = `<div class="card">
+        <img src="./img/${member.image}">
+        <p class="card_member">${member.name}</p>
+        <p class="card_member">${member.role}</p></div>`;
 
     // column.innerHTML += stamp; (E' SBAGLIATO!!!!!)
 
