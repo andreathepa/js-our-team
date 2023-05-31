@@ -1,49 +1,70 @@
 // MILESTONE 0:
 // Creare l’array di oggetti con le informazioni fornite (file informazioni team).
 
-let staff = [
+const staff = [
     {
-        'Nome': 'Wayne Barnett',
-        'Role': 'Founder & CEO',
-        'Image': 'wayne-barnett-founder-ceo.jpg'
+        'name': 'Wayne Barnett',
+        'role': 'Founder & CEO',
+        'image': 'wayne-barnett-founder-ceo.jpg'
     },
     {
-        'Nome': 'Angela Caroll',
-        'Role': 'Chief Editor',
-        'Image': 'angela-caroll-chief-editor.jpg'
+        'name': 'Angela Caroll',
+        'role': 'Chief Editor',
+        'image': 'angela-caroll-chief-editor.jpg'
     },
     {
-        'Nome': 'Walter Gordon',
-        'Role': 'Office Manager',
-        'Image': 'walter-gordon-office-manager.jpg'
+        'name': 'Walter Gordon',
+        'role': 'Office Manager',
+        'image': 'walter-gordon-office-manager.jpg'
     },
     {
-        'Nome': 'Angela Lopez',
-        'Role': 'Social Media Manager',
-        'Image': 'angela-lopez-social-media-manager.jpg'
+        'name': 'Angela Lopez',
+        'role': 'Social Media Manager',
+        'image': 'angela-lopez-social-media-manager.jpg'
     },
     {
-        'Nome': 'Scott Estrada',
-        'Role': 'Developer',
-        'Image': 'scott-estrada-developer.jpg'
+        'name': 'Scott Estrada',
+        'role': 'Developer',
+        'image': 'scott-estrada-developer.jpg'
     },
     {
-        'Nome': 'Barbara Ramos',
-        'Role': 'Graphic Designer',
-        'Image': 'barbara-ramos-graphic-designer.jpg'
+        'name': 'Barbara Ramos',
+        'role': 'Graphic Designer',
+        'image': 'barbara-ramos-graphic-designer.jpg'
     },
 
 ];
 
-console.log(staff)
+console.log(staff);
 
 // MILESTONE 1: Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
 
-for(let i=0; i<staff.length; i++){
-    console.log(staff[i])
-}
+// for(let i=0; i<staff.length; i++){
+//     console.log(staff[i]);
+// }
 
 // MILESTONE 2:
 // Stampare le stesse informazioni su DOM sottoforma di stringhe
+
+let stamp = document.getElementById('output');
+
+for(let i=0; i<staff.length; i++){
+
+    let member = staff[i];
+
+    console.log(member);
+
+    let column = `<div>
+        <p>${member.image}</p>
+        <p>${member.name}</p>
+        <p>${member.role}</p></div>`;
+
+    // column.innerHTML += stamp; (E' SBAGLIATO!!!!!)
+
+    stamp.innerHTML += column;
+}
+
+
+
 // BONUS 1: Trasformare la stringa foto in una immagine effettiva
 // BONUS 2: Organizzare i singoli membri in card/schede (screenshot.png. Ovviamente è un esempio, siete liberi di farle come volete)
