@@ -55,7 +55,7 @@ for(let i=0; i<staff.length; i++){
     console.log(member);
 
     let column = `<div>
-        <p>${member.image}</p>
+        <img src="${image.member}">
         <p>${member.name}</p>
         <p>${member.role}</p></div>`;
 
@@ -67,4 +67,6 @@ for(let i=0; i<staff.length; i++){
 
 
 // BONUS 1: Trasformare la stringa foto in una immagine effettiva
+
+
 // BONUS 2: Organizzare i singoli membri in card/schede (screenshot.png. Ovviamente è un esempio, siete liberi di farle come volete)
